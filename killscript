@@ -1,0 +1,2 @@
+#!/bin/bash
+ps -u cs120wmx | grep pa1 | awk '{print $1}' | xargs kill -9
