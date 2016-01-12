@@ -31,7 +31,7 @@ for testfile in `ls $TEST_DIR`; do
         echo "$testfile passed."
     fi
 done
-if [[ $FIALED_TEST -eq 0 ]]; then
+if [[ $FAILED_TEST -eq 0 ]]; then
     echo "ALL TESTS have passed!"
 fi
 exitProgram
