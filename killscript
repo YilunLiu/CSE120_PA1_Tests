@@ -1,2 +1,7 @@
 #!/bin/bash
-ps -u cs120wmx | grep pa1 | awk '{print $1}' | xargs kill -9
+args=$( ps -u $(whoami) | grep pa1 | awk '{print $1}')
+if [ "$args" == "" ]; then
+	echo "Nothing to kill"
+else
+	echo $args | xargs kill -9
+fi
